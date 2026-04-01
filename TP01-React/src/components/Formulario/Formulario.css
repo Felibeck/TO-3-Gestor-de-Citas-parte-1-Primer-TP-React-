@@ -1,0 +1,78 @@
+.formulario-wrapper {
+  padding: 0 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+form label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form input[type="textArea"],
+form textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #333;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="time"]:focus,
+form textarea:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
+
+form input[type="text"]::placeholder,
+form input[type="textArea"]::placeholder {
+  color: #aaa;
+}
+
+form input[type="textArea"] {
+  height: 80px;
+  resize: vertical;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  background: #22d3ee;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+form input[type="submit"]:hover {
+  background: #06b6d4;
+  transform: translateY(-1px);
+}
+
+form input[type="submit"]:active {
+  transform: translateY(0);
+}

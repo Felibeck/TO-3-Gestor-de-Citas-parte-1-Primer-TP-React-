@@ -1,45 +1,31 @@
 import './Formulario.css';
 import Subtitulo from '../Subtitulo';
 
-const Formulario = ( {sub} ) =>
-{
-    return (
-        <div>
+const Formulario = ({ sub }) => {
+  return (
+    <div className="formulario-wrapper">
+      <Subtitulo sub={sub} />
 
-            <Subtitulo sub = {sub}/>
+      <form>
+        <label>Nombre Mascota</label>
+        <input type="text" placeholder="Nombre Mascota" />
 
-        <form>
+        <label>Nombre Dueño</label>
+        <input type="text" placeholder="Nombre dueño de la mascota" />
 
-            <label>Nombre Mascota</label>
+        <label>Fecha</label>
+        <input type="date" />
 
-            <input type="text" placeholder='Nombre Mascota'/>
+        <label>hora</label>
+        <input type="time" />
 
-            <label>Nombre Dueño</label>
+        <label>Sintomas</label>
+        <input type="textArea" placeholder="" />
 
-            <input type="text" placeholder='Nombre dueño de la mascota'/>
-
-            <label>Fecha</label>
-
-            <input type = "date"/>  
-
-            <label>Hora</label>
-
-            <input type= "time"/>
-
-            <label>Sintomas</label>
-
-            <input type="textArea"/>
-
-            <input type="submit" value="Agregar Cita"/>
-
-
-        </form>
-
-
-
-
-        </div>
-    )
-}
+        <input type="submit" value="Agregar Cita" />
+      </form>
+    </div>
+  );
+};
 
 export default Formulario;

@@ -1,0 +1,42 @@
+.cita-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem 1rem 1.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.cita-card p {
+  color: #333333;
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+
+.cita-card p b {
+  font-weight: 700;
+  color: #111111;
+}
+
+.cita-card button {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.55rem 1rem;
+  background: transparent;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: #555555;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.cita-card button:hover {
+  background: #fee2e2;
+  border-color: #f87171;
+  color: #dc2626;
+}
