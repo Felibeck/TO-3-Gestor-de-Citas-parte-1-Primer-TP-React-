@@ -1,12 +1,25 @@
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
 .app-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 0 2rem 2rem 2rem;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
   box-sizing: border-box;
+  align-items: start;
+}
+
+.col-left,
+.col-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
