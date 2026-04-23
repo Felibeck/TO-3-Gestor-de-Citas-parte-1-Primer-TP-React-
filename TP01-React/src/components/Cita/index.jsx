@@ -1,13 +1,13 @@
 import './Cita.css';
 
-const Cita = ({ objCita }) => {
+const Cita = ({ cita }) => {
   return (
     <div className="cita-card">
-      <p><b>Mascota:</b> {objCita.nMascota}</p>
-      <p><b>Dueño:</b> {objCita.dueno}</p>
-      <p><b>Fecha:</b> {objCita.fecha}</p>
-      <p><b>Hora:</b> {objCita.hora}</p>
-      <p><b>Sintomas:</b> {objCita.sintomas}</p>
+      <p><b>Mascota:</b> {cita.nMascota}</p>
+      <p><b>Dueño:</b> {cita.dueno}</p>
+      <p><b>Fecha:</b> {cita.fecha}</p>
+      <p><b>Hora:</b> {cita.hora}</p>
+      <p><b>Sintomas:</b> {cita.sintomas}</p>
 
       <button type="button">Eliminar ×</button>
     </div>
