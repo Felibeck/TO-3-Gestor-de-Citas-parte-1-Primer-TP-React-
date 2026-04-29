@@ -5,44 +5,50 @@ import Cita from '../Cita';
 
 const Formulario = ({ sub , setCitas, citas}) => {  
 
-  const agregarCita = e =>
-  {
+  const agregarCita = e => {
+
     e.preventDefault();
 
-    const formulario = e.target 
+    const formulario = e.target;
 
+    const mascota = formulario.mascota.value;
+    const propietario = formulario.propietario.value;
+    const fecha = formulario.fecha.value;
+    const hora = formulario.hora.value;
+    const sintomas = formulario.sintomas.value;
 
+    const cita = {
+      id: Date.now(),
+      mascota,
+      propietario,
+      fecha,
+      hora,
+      sintomas,
+    };
 
-      setCitas(
+    setCitas([...citas, cita]);
 
-      ...citas, 
-      // falta crear el objeto cita a partir de los datos del formulario
-      
-    )
-
-}
-
-
-
+    formulario.reset();
+  };
   return (
     <div className="formulario-wrapper">
       <Subtitulo sub={sub} />
 
       <form onSubmit={agregarCita}>
         <label>Nombre Mascota</label>
-        <input type="text" placeholder="Nombre Mascota" />
+        <input name="mascota" type="text" placeholder="Nombre Mascota" />
 
         <label>Nombre Dueño</label>
-        <input type="text" placeholder="Nombre dueño de la mascota" />
+        <input name="propietario" type="text" placeholder="Nombre dueño de la mascota" />
 
         <label>Fecha</label>
-        <input type="date" />
+        <input name="fecha" type="date" />
 
         <label>hora</label>
-        <input type="time" />
+        <input name="hora" type="time" />
 
         <label>Sintomas</label>
-        <input type="textArea" placeholder="" />
+        <textarea name="sintomas" placeholder="Describe los síntomas" />
 
         <input type="submit" value="Agregar Cita" />
       </form>

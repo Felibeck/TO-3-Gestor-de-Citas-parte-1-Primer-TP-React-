@@ -1,26 +1,23 @@
 import './Listado.css';
 import Cita from '../Cita';
 import Subtitulo from '../Subtitulo';
-import { useState } from 'react';
 
-const Listado = ({ sub , setCitas , citas}) => {
+const Listado = ({ sub, setCitas, citas }) => {
+  const listaCitas = citas || [];
 
-
+  const eliminarCita = id => {
+    setCitas(e => e.filter(c => c.id !== id));
+  };
 
   return (
     <>
       <Subtitulo sub={sub} />
       <div className="listado-wrapper">
-
         {
-          listaCitas.map((c, i) =>
-          {
-            <Cita key={i} citas={c}/> 
-          }
-          )
-
+          listaCitas.map((c, i) => (
+            <Cita key={c.id ?? i} cita={c} onEliminar={eliminarCita} />
+          ))
         }
-
       </div>
     </>
   );
